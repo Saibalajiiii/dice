@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,intial-scale=1.0">
+<style>
+body{background:black}
+h1{color:white}
+fieldset{
+border:1px solid black;
+width:210px;
+background-color:black
+}
+.r{
+width:20%;
+height:10%;
+}
+.ir{
+width:20%;
+height:10%;
+background:teal;
+color:white;
+}
+.irl{
+width:20%;
+height:10%;
+background:tomato;
+color:white;
+}
+input{
+margin-left:10px}
+
+#box{
+height:10%;
+margin-top:10px;
+width:90%;
+color:red;
+position:relative
+
+}
+
+.p{
+height:10%;
+width:90%;
+
+background:green;
+color:white;
+border:1px solid white
+
+}
+fieldset{
+height:100%;
+width:100%
+}
+</style>
+</head>
+<h1>CALCULATOR</h1>
+<fieldset>
+<input id="box"><br><br>
+<input type="button" value="1" onclick="f('1')" class="r" > 
+<input type="button" value="2" onclick="f('2')" class="r">
+<input type="button" value="3" onclick="f('3')" class="r">
+<input type="button" value="+" onclick="f('+')" class="ir">
+<br><br>
+<input type="button" value="4" onclick="f('4')" class="r">
+<input type="button" value="5" onclick="f('5')" class="r">
+<input type="button" value="6" onclick="f('6')" class="r">
+<input type="button" value="-" onclick="f('-')" class="ir">
+<br><br>
+<input type="button" value="7" onclick="f('7')" class="r">
+<input type="button" value="8" onclick="f('8')" class="r">
+<input type="button" value="9" onclick="f('9')" class="r">
+<input type="button" value="/" onclick="f('/')" class="ir">
+<br><br>
+<input type="button" value="AC" onclick="g()" class="irl">
+<input type="button" value="0" onclick="f('0')" class="r">
+<input type="button" value="." onclick="f('.')" class="r">
+<input type="button" value="*" onclick="f('*')" class="ir">
+<br><br>
+
+
+<input type="button" onclick="k()" value="Result" class="p">
+<br><br>
+
+</fieldset>
+<script>
+function f(value){
+document.getElementById("box").value+=value
+}
+function g(){
+document.getElementById("box").value=""
+}
+function k(){
+a=document.getElementById("box").value;
+b=eval(a)
+c=document.getElementById("box").value=b;
+
+}
+
+
+
+
+</script>
+</html>
